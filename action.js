@@ -24,7 +24,7 @@ guess.addEventListener("keypress", function (e) {
 // add event listener on the Check button so the user has the option to click on it instead of pressing the Enter key, executes the function
 document.querySelector("#guessButton").addEventListener("click", function(){
   checkGuess();
-  console.log("El boton funciona");
+  console.log("El boton funciona bien");
 });
 
 // Execute this function to play the audio
