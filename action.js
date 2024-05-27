@@ -40,7 +40,7 @@ var main = async function () {
 
 //function that compares player's guess with Pokemon name and based on that either increases or resets streak
 function checkGuess() {
-  if (pokemonName.toLowerCase() === guess.value) {
+  if (pokemonName.toUpperCase() === guess.value) {
     streak++; //correct guess - increase streak by one
   } else {
     streak = 0; //wrong guess - reset streak
