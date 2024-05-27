@@ -18,6 +18,13 @@ guess.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     checkGuess();
   }
+  console.log("el Enter funciona");
+});
+
+// add event listener on the Check button so the user has the option to click on it instead of pressing the Enter key, executes the function
+document.querySelector("#guessButton").addEventListener("click", function(){
+  checkGuess();
+  console.log("El boton funciona");
 });
 
 // Execute this function to play the audio
@@ -40,7 +47,7 @@ var main = async function () {
 
 //function that compares player's guess with Pokemon name and based on that either increases or resets streak
 function checkGuess() {
-  if (pokemonName.toUpperCase() === guess.value) {
+  if (pokemonName.toLowerCase() === guess.value.toLowerCase()) {
     streak++; //correct guess - increase streak by one
   } else {
     streak = 0; //wrong guess - reset streak
